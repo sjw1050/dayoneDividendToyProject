@@ -4,40 +4,40 @@
 
 #### POST http://localhost:8080/auth/signup
 
-    ```
-    Content-Type: application/json
-    
-    {
-      "username" : "test1",
-      "password" : "test123!@#",
-      "roles"    : ["ROLE_READ", "ROLE_WRITE"]
-    }
-    ```
+```
+Content-Type: application/json
 
-    ```
-    response
+{
+  "username" : "test1",
+  "password" : "test123!@#",
+  "roles"    : ["ROLE_READ", "ROLE_WRITE"]
+}
+```
+
+```
+response
+{
+  "id": 유저번호,
+  "username": "사용자 id",
+  "password": "사용자의 비밀번호",
+  "roles": [
+    "ROLE_READ",
+    "ROLE_WRITE"
+  ],
+  "enabled": false,
+  "authorities": [
     {
-      "id": 유저번호,
-      "username": "사용자 id",
-      "password": "사용자의 비밀번호",
-      "roles": [
-        "ROLE_READ",
-        "ROLE_WRITE"
-      ],
-      "enabled": false,
-      "authorities": [
-        {
-          "authority": "ROLE_READ"
-        },
-        {
-          "authority": "ROLE_WRITE"
-        }
-      ],
-      "accountNonLocked": false,
-      "credentialsNonExpired": false,
-      "accountNonExpired": false
+      "authority": "ROLE_READ"
+    },
+    {
+      "authority": "ROLE_WRITE"
     }
-    ```
+  ],
+  "accountNonLocked": false,
+  "credentialsNonExpired": false,
+  "accountNonExpired": false
+}
+```
 
 **회원 로그인 API**
 
