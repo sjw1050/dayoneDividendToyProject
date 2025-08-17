@@ -1,6 +1,6 @@
 ## 실전배당금 토이프로젝트
 
-## 회원가입 API ##
+**회원가입 API**
 
 #### POST http://localhost:8080/auth/signup
 
@@ -39,7 +39,7 @@
     }
     ```
 
-## 회원 로그인 API ## 
+**회원 로그인 API**
 
 #### POST http://localhost:8080/auth/signin
 
