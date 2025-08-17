@@ -1,27 +1,59 @@
-# title
+## 실전배당금 토이프로젝트
 
-## title
+## 회원가입 API ##
 
-### title
+#### POST http://localhost:8080/auth/signup
 
-* 리스트
-    * 리스트
-        * 리스트
+    ```
+    Content-Type: application/json
+    
+    {
+      "username" : "test1",
+      "password" : "test123!@#",
+      "roles"    : ["ROLE_READ", "ROLE_WRITE"]
+    }
+    ```
 
-- 목록
-    - 목록
-        - 목록
+    ```
+    response
+    {
+      "id": 유저번호,
+      "username": "사용자 id",
+      "password": "사용자의 비밀번호",
+      "roles": [
+        "ROLE_READ",
+        "ROLE_WRITE"
+      ],
+      "enabled": false,
+      "authorities": [
+        {
+          "authority": "ROLE_READ"
+        },
+        {
+          "authority": "ROLE_WRITE"
+        }
+      ],
+      "accountNonLocked": false,
+      "credentialsNonExpired": false,
+      "accountNonExpired": false
+    }
+    ```
 
-1. 1번
-2. 2번
-3. 3번
-4. 4번
+## 회원 로그인 API ## 
 
-**볼드체**
+#### POST http://localhost:8080/auth/signin
 
-_볼드_
+```
+Content-Type: application/json
 
-__볼드__
+{
+"username" : "로그인할 유저 ID",
+"password" : "유저 비밓번호"
+}
+```
 
-*볼드*
+```
+response
+    loginUserKey 
+```
 
